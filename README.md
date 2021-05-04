@@ -1,4 +1,4 @@
-# JetPackComposeNavigation
+# JetPack Compose PAGING APP
 An App Utilizing the JetPack Compose Pagination Library to fetch and display data, uses tools like
 
 COMPOSE PAGINATION LIBRARY
