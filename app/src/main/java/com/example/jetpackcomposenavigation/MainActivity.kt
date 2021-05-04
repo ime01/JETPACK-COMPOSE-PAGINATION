@@ -5,11 +5,9 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
@@ -23,7 +21,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -31,12 +28,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.jetpackcomposenavigation.ui.theme.JetPackComposeNavigationTheme
 import androidx.navigation.compose.navigate
-import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.items
 import com.example.jetpackcomposenavigation.data.network.IPhotoRepository
 import com.example.jetpackcomposenavigation.data.network.RetrofitBuilder
-import com.google.accompanist.coil.CoilImage
 import dev.chrisbanes.accompanist.picasso.PicassoImage
 
 class MainActivity : AppCompatActivity() {
@@ -104,19 +99,6 @@ fun PhotoUI(viewModel: MainViewModel){
 
                    )
 
-
-
-//                   CoilImage(
-//                       data = it,
-//                       modifier = Modifier
-//                           .fillMaxWidth()
-//                           .border(
-//                               width = 4.dp,
-//                               color = Color.White,
-//                               shape = RoundedCornerShape(0.dp)
-//                   ) {
-//
-//                   }
 
 //                   CoilImage(
 //                       model = it,
